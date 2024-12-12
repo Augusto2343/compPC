@@ -55,7 +55,11 @@ const buscarPrecio= () =>{
                 alert("Esperamos verlo pronto")
                 salir=1
                 break ;
-
+            case "filtrar":
+                return buscarPrecio();
+            default:
+                productos.forEach(productos => console.log(`Nombre: ${productos.nombre} precio: ${productos.precio}$`))
+                return comprar();
         }
     }
     else{
@@ -100,5 +104,5 @@ const comprar = () =>{
     }
 
 }
-alert("Bienvenido a PComponentes")
+alert("Bienvenido a PComponentes\n Abra la consola porque recibirá información allí también")
 inicio();
